@@ -1,9 +1,10 @@
 # TODO
-# Step 2 - Create links and systems dictionaries
-# Step 3 - Push links and systems dictionaries to Redis
-# Step 4 - Draw topology graph?
-# Step 5 - play with json formats - original, short, etc
+* Step 2 - Create links and systems dictionaries
+* Step 3 - Push links and systems dictionaries to Redis
+* Step 4 - Draw topology graph?
+* Step 5 - play with json formats - original, short, etc
 
+```
 docker pull redis
 docker run --name topo-redis -d redis redis-server 
 docker run -it --rm redis redis-cli -h topo-redis
@@ -12,6 +13,7 @@ vi /etc/redis.conf
 systemctl start redis.service
 systemctl enable redis.service
 redis-cli -h 10.210.8.142 ping
+```
 
 # Device types
 vendid=0x2c9
